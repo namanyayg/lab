@@ -293,6 +293,12 @@ h3 a:hover {
 .collisions:after {
   background: rgba(14,173,21,0.6);
 }
+.keyzen .creation__overlay {
+  background: rgba(11,182,103,0.05);
+}
+.keyzen:after {
+  background: rgba(11,182,103,0.8);
+}
 .equipot .creation__overlay {
   background: rgba(255,87,34,0.05);
 }
