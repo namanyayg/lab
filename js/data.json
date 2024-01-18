@@ -4,56 +4,66 @@
       "key": "lccpp",
       "href": "https://leanpub.com/lessconfusingcpp",
       "name": "Less Confusing C++",
-      "type": "Book"
-    },
-    {
-      "key": "collisions",
-      "href": "https://nmn.gl/collisions",
-      "name": "Collisions",
-      "type": "Simulator"
-    },
-    {
-      "key": "diode",
-      "href": "https://nmn.gl/diode/",
-      "name": "P-N Junction Diode",
-      "type": "Simulator"
+      "type": "Book",
+      "createdAt": "2017-06",
+      "isClosedSource": true
     },
     {
       "key": "keyzen",
       "href": "https://nmn.gl/KeyZen/",
       "name": "KeyZen Touch Typing",
-      "type": "Game"
+      "type": "Game",
+      "createdAt": "2013-10"
     },
     {
-      "key": "acgraphs",
-      "href": "https://nmn.gl/acgraphs",
-      "name": "AC Graphs",
-      "type": "Simulator"
-    },
-    {
-      "key": "bandc",
-      "oldHref": "http://code-warriors.org/research/mathematical-bulls-and-cows.pdf",
-      "href": "https://nmn.gl/moo",
-      "name": "Bulls & Cows",
-      "type": "Research"
+      "key": "diode",
+      "href": "https://nmn.gl/diode/",
+      "name": "P-N Junction Diode",
+      "type": "Simulator",
+      "createdAt": "2015-12"
     },
     {
       "key": "acgen",
       "href": "https://nmn.gl/acgen",
       "name": "AC Generator",
-      "type": "Simulator"
+      "type": "Simulator",
+      "createdAt": "2015-10"
     },
     {
-      "key": "shm-simulator",
-      "href": "https://nmn.gl/SHM-simulator",
-      "name": "Simple Harmonic Motion",
-      "type": "Simulator"
+      "key": "collisions",
+      "href": "https://nmn.gl/collisions",
+      "name": "Collisions",
+      "type": "Simulator",
+      "createdAt": "2015-08"
+    },
+    {
+      "key": "bandc",
+      "oldHref": "https://vixra.org/pdf/1601.0302v1.pdf",
+      "href": "https://nmn.gl/moo",
+      "name": "Bulls & Cows",
+      "type": "Research",
+      "createdAt": "2015-11"
+    },
+    {
+      "key": "acgraphs",
+      "href": "https://nmn.gl/acgraphs",
+      "name": "AC Graphs",
+      "type": "Simulator",
+      "createdAt": "2015-12"
     },
     {
       "key": "equipot",
       "href": "https://nmn.gl/Equipot",
       "name": "Equipotential Surfaces",
-      "type": "Simulator"
+      "type": "Simulator",
+      "createdAt": "2015-08"
+    },
+    {
+      "key": "shm-simulator",
+      "href": "https://nmn.gl/SHM-simulator",
+      "name": "Simple Harmonic Motion",
+      "type": "Simulator",
+      "createdAt": "2015-02"
     }
   ]
 }

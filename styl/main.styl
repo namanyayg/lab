@@ -7,22 +7,27 @@
 @import 'partials/_var'
 
 /* ==========================================================================
-   
+
     LET'S GET STARTED!
 
    ========================================================================== */
 
 
-body 
+body
   font-family 'Source Sans Pro', serif
   font-weight 300
   font-size 125%
   color #353535
-  
+
 $text-color = desaturate(#0a3d5d, 60%)
+$brand-color = #2996ff
+
 h1, h2, h3
   font-weight 300
   color $text-color
+
+a
+  color $brand-color
 
 
 /* ==========================================================================
@@ -32,7 +37,7 @@ h1, h2, h3
 
 header
   text-align center
-  
+
 h1
   font-size 4em
   margin 0 0
@@ -45,8 +50,8 @@ h2
 
 h3
   margin 0 0 1.5em
-  
-  a 
+
+  a
     color inherit
     text-decoration none
     background lighten($text-color, 90%)
@@ -58,141 +63,134 @@ h3
     &:hover
       background lighten($text-color, 20%)
       color white
-    
+
 
 .creations
   overflow hidden
-  max-width 70em
+  max-width 60em
   margin 0 auto 4em
 
 .creation
-  width 33.33%
-  box-sizing border-box
-  float left
-  height 0
-  padding-bottom 25%
   overflow hidden
-  position relative
-  cursor pointer
-  
+  display flex
+  flex-direction row
+  justify-content space-between
+  width 100%
+  margin 0 0 4em
+
+  a
+    text-decoration none
+
+  &__img
+    position relative
+    width calc(50% - 1em)
+
   &__overlay
-    content '' 
+    content ''
     position absolute
     left 0
     top 0
     bottom 0
     right 0
+    z-index 2
 
-  &:after
-    content ''
-    position absolute
-    left 0
-    right 0
-    bottom 0
-    height 4em
-    transition all .2s ease
+  &__content
+    width calc(50% - 1em)
 
-  &__text
-    z-index 3
-    position absolute
-    left 0
-    bottom 0
-    right 0
-    height 4em
-    transition all .2s ease-out
-    
+  footer
+    font-size .875em
+
   &__name
-    text-align center
-    padding 1.5em 1em
-    line-height 1 
-    color white
-    transition all .2s ease-out
+    text-shadow 1px 1px rgba(black, .1)
+    font-size 1.5em
+    font-weight 400
+    margin 0 0 .5rem
+    color inherit
+
+  &__date-and-age
+    display inline-block
+
+    .date
+      font-weight 400
+
+  &__type
+    padding .1em .375em
+    margin-right .375em
+    border-radius 3px
+    font-weight 400
+    display inline-block
+    border 2px solid
     text-shadow 1px 1px rgba(black, .1)
 
-  .type
-    &:before
-      content '|'
-      opacity .5
-      text-shadow none
-      padding 0 .4em
-      position relative
-      top -1px
+  &__link
+    box-sizing border-box
+    display inline-block
+    font-weight 400
+    color white
+    padding .5em 1em
+    text-shadow 1px 1px rgba(black, .1)
+    border-radius 3px
+    width 9rem
+    text-align center
+    transition all .3s ease
 
-  a
+    &:after
+      content ' →'
+
+    &:hover, &:active, &:focus
+      box-shadow inset 0 0 10em rgba(black, .2)
+
+  &__source
     display block
-    color inherit
-    text-decoration none  
+    font-size .875em
+    padding-top .25em
+    width 9rem
+    text-align center
+
+    a
+      border-bottom thin solid mix(#eee, $brand-color)
 
   img
     width 100%
-      
-  
-  &:hover
-    .creation__text, &:after
-      height 6em
-      
-    .creation__name
-      padding 2.5em 1em
+
+creation-style(color)
+  .creation__overlay
+    background rgba(color, .05)
+  .creation__type
+    color color
+    border-color color
+  .creation__link
+    background color
 
 .collisions
-  .creation__overlay
-    background rgba(#0ead15, .05)
-  &:after 
-    background rgba(#0ead15, .6)
+  creation-style #0ead15
 
 .keyzen
-  .creation__overlay
-    background rgba(#0bb667, .05)
-  &:after 
-    background rgba(#0bb667, .8)
+  creation-style #0bb667
 
 .equipot
-  .creation__overlay
-    background rgba(#FF5722, .05)
-  &:after
-    background rgba(#FF5722, .8)
-  
+  creation-style #FF5722
+
 .acgen
-  .creation__overlay
-    background rgba(#3F51B5, .05)
-  &:after
-    background rgba(#3F51B5, .9)
-  
+  creation-style #3F51B5
+
 .lccpp
-  .creation__overlay
-    background rgba(#2979FF, .05)
-  &:after
-    background rgba(#2979FF, .8)
+  creation-style #2979FF
 
 .shm-simulator
-  .creation__overlay
-    background rgba(#9C27B0, .05)
-  &:after
-    background rgba(#9C27B0, .8)
-    
+  creation-style #9C27B0
+
 .ac-video
-  .creation__overlay
-    background rgba(#FFAB00, .05)
-  &:after
-    background rgba(#FFAB00, .9)
-    
+  creation-style #FFAB00
+
 .diode
-  .creation__overlay
-    background rgba(#ff5589, .06)
-  &:after
-    background rgba(#ff5589, .9)
+  creation-style #ff5589
 
 .bandc
-  .creation__overlay
-    background rgba(#565e8e, .06)
-  &:after
-    background rgba(#565e8e, .9)  
-    
+  creation-style #565e8e
+
 .acgraphs
-  .creation__overlay
-    background rgba(#009688, .07)
-  &:after
-    background rgba(#009688, .9)  
+  creation-style #009688
 
 
 
@@ -200,36 +198,19 @@ h3
    =MEDIA
    ========================================================================== */
 
-@media (max-width 90em) 
-  .creation
-    width 33.3333%
-    padding-bottom 25%
+// @media (max-width 90em) 
 
 @media (max-width 65em)
-  .creation
-    width 50%
-    padding-bottom 37.5%
-    margin 1.5em 0
-    
-  h1 
+  h1
     font-size 3em
   h2, h3
     font-size 1em
-    
+
 @media (max-width 50em)
   body
     max-width 25em
     margin: 0 auto;
 
-  .creation
-    width 100%
-    padding-bottom 75%
-    margin-bottom 2em
-    
-@media (max-width 35em) 
+@media (max-width 35em)
   body
     font-size 112.5%
-
-@media (max-width 30em)
-  .type
-    display none

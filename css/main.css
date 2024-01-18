@@ -167,7 +167,7 @@ table {
   border-spacing: 0;
 }
 /* ==========================================================================
-   
+
     LET'S GET STARTED!
 
    ========================================================================== */
@@ -182,6 +182,9 @@ h2,
 h3 {
   font-weight: 300;
   color: #233744;
+}
+a {
+  color: #2996ff;
 }
 /* ==========================================================================
    =Content
@@ -217,18 +220,23 @@ h3 a:hover {
 }
 .creations {
   overflow: hidden;
-  max-width: 70em;
+  max-width: 60em;
   margin: 0 auto 4em;
 }
 .creation {
-  width: 33.33%;
-  box-sizing: border-box;
-  float: left;
-  height: 0;
-  padding-bottom: 25%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 4em;
+}
+.creation a {
+  text-decoration: none;
+}
+.creation__img {
   position: relative;
-  cursor: pointer;
+  width: calc(50% - 1em);
 }
 .creation__overlay {
   content: '';
@@ -237,131 +245,173 @@ h3 a:hover {
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
-.creation:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 4em;
-  transition: all 0.2s ease;
+.creation__content {
+  width: calc(50% - 1em);
 }
-.creation__text {
-  z-index: 3;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 4em;
-  transition: all 0.2s ease-out;
+.creation footer {
+  font-size: 0.875em;
 }
 .creation__name {
-  text-align: center;
-  padding: 1.5em 1em;
-  line-height: 1;
-  color: #fff;
-  transition: all 0.2s ease-out;
+  text-shadow: 1px 1px rgba(0,0,0,0.1);
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  color: inherit;
+}
+.creation__date-and-age {
+  display: inline-block;
+}
+.creation__date-and-age .date {
+  font-weight: 400;
+}
+.creation__type {
+  padding: 0.1em 0.375em;
+  margin-right: 0.375em;
+  border-radius: 3px;
+  font-weight: 400;
+  display: inline-block;
+  border: 2px solid;
   text-shadow: 1px 1px rgba(0,0,0,0.1);
 }
-.creation .type:before {
-  content: '|';
-  opacity: 0.5;
-  text-shadow: none;
-  padding: 0 0.4em;
-  position: relative;
-  top: -1px;
+.creation__link {
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-shadow: 1px 1px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  width: 9rem;
+  text-align: center;
+  transition: all 0.3s ease;
 }
-.creation a {
+.creation__link:after {
+  content: ' →';
+}
+.creation__link:hover,
+.creation__link:active,
+.creation__link:focus {
+  box-shadow: inset 0 0 10em rgba(0,0,0,0.2);
+}
+.creation__source {
   display: block;
-  color: inherit;
-  text-decoration: none;
+  font-size: 0.875em;
+  padding-top: 0.25em;
+  width: 9rem;
+  text-align: center;
+}
+.creation__source a {
+  border-bottom: thin solid #8bc2f6;
 }
 .creation img {
   width: 100%;
 }
-.creation:hover .creation__text,
-.creation:hover:after {
-  height: 6em;
-}
-.creation:hover .creation__name {
-  padding: 2.5em 1em;
-}
 .collisions .creation__overlay {
   background: rgba(14,173,21,0.05);
 }
-.collisions:after {
-  background: rgba(14,173,21,0.6);
+.collisions .creation__type {
+  color: #0ead15;
+  border-color: #0ead15;
+}
+.collisions .creation__link {
+  background: #0ead15;
 }
 .keyzen .creation__overlay {
   background: rgba(11,182,103,0.05);
 }
-.keyzen:after {
-  background: rgba(11,182,103,0.8);
+.keyzen .creation__type {
+  color: #0bb667;
+  border-color: #0bb667;
+}
+.keyzen .creation__link {
+  background: #0bb667;
 }
 .equipot .creation__overlay {
   background: rgba(255,87,34,0.05);
 }
-.equipot:after {
-  background: rgba(255,87,34,0.8);
+.equipot .creation__type {
+  color: #ff5722;
+  border-color: #ff5722;
+}
+.equipot .creation__link {
+  background: #ff5722;
 }
 .acgen .creation__overlay {
   background: rgba(63,81,181,0.05);
 }
-.acgen:after {
-  background: rgba(63,81,181,0.9);
+.acgen .creation__type {
+  color: #3f51b5;
+  border-color: #3f51b5;
+}
+.acgen .creation__link {
+  background: #3f51b5;
 }
 .lccpp .creation__overlay {
   background: rgba(41,121,255,0.05);
 }
-.lccpp:after {
-  background: rgba(41,121,255,0.8);
+.lccpp .creation__type {
+  color: #2979ff;
+  border-color: #2979ff;
+}
+.lccpp .creation__link {
+  background: #2979ff;
 }
 .shm-simulator .creation__overlay {
   background: rgba(156,39,176,0.05);
 }
-.shm-simulator:after {
-  background: rgba(156,39,176,0.8);
+.shm-simulator .creation__type {
+  color: #9c27b0;
+  border-color: #9c27b0;
+}
+.shm-simulator .creation__link {
+  background: #9c27b0;
 }
 .ac-video .creation__overlay {
   background: rgba(255,171,0,0.05);
 }
-.ac-video:after {
-  background: rgba(255,171,0,0.9);
+.ac-video .creation__type {
+  color: #ffab00;
+  border-color: #ffab00;
+}
+.ac-video .creation__link {
+  background: #ffab00;
 }
 .diode .creation__overlay {
-  background: rgba(255,85,137,0.06);
+  background: rgba(255,85,137,0.05);
 }
-.diode:after {
-  background: rgba(255,85,137,0.9);
+.diode .creation__type {
+  color: #ff5589;
+  border-color: #ff5589;
+}
+.diode .creation__link {
+  background: #ff5589;
 }
 .bandc .creation__overlay {
-  background: rgba(86,94,142,0.06);
+  background: rgba(86,94,142,0.05);
 }
-.bandc:after {
-  background: rgba(86,94,142,0.9);
+.bandc .creation__type {
+  color: #565e8e;
+  border-color: #565e8e;
+}
+.bandc .creation__link {
+  background: #565e8e;
 }
 .acgraphs .creation__overlay {
-  background: rgba(0,150,136,0.07);
+  background: rgba(0,150,136,0.05);
 }
-.acgraphs:after {
-  background: rgba(0,150,136,0.9);
+.acgraphs .creation__type {
+  color: #009688;
+  border-color: #009688;
+}
+.acgraphs .creation__link {
+  background: #009688;
 }
 /* ==========================================================================
    =MEDIA
    ========================================================================== */
-@media (max-width: 90em) {
-  .creation {
-    width: 33.3333%;
-    padding-bottom: 25%;
-  }
-}
 @media (max-width: 65em) {
-  .creation {
-    width: 50%;
-    padding-bottom: 37.5%;
-    margin: 1.5em 0;
-  }
   h1 {
     font-size: 3em;
   }
@@ -375,19 +425,9 @@ h3 a:hover {
     max-width: 25em;
     margin: 0 auto;
   }
-  .creation {
-    width: 100%;
-    padding-bottom: 75%;
-    margin-bottom: 2em;
-  }
 }
 @media (max-width: 35em) {
   body {
     font-size: 112.5%;
-  }
-}
-@media (max-width: 30em) {
-  .type {
-    display: none;
   }
 }

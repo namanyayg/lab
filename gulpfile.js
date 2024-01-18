@@ -18,7 +18,7 @@ var p = {
 
 var debug = false
 var publish = false
-publish = true
+// publish = true
 var build = publish
 
 
