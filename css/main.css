@@ -176,6 +176,7 @@ body {
   font-weight: 300;
   font-size: 125%;
   color: #353535;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -387,6 +388,13 @@ h3 {
 .creation__img {
   position: relative;
   width: calc(50% - 1em);
+  display: flex;
+  align-items: center;
+}
+.creation__img img,
+.creation__img a {
+  display: block;
+  width: 100%;
 }
 .creation__overlay {
   content: '';
@@ -455,9 +463,6 @@ h3 {
 .creation__source a {
   border-bottom: thin solid #8bc2f6;
 }
-.creation img {
-  width: 100%;
-}
 @media only screen and (max-width: 40em) {
   .creation {
     flex-direction: column;
@@ -483,6 +488,16 @@ h3 {
 }
 .collisions .creation__link {
   background: #0ead15;
+}
+.webstiles .creation__overlay {
+  background: rgba(14,144,235,0.05);
+}
+.webstiles .creation__type {
+  color: #0e90eb;
+  border-color: #0e90eb;
+}
+.webstiles .creation__link {
+  background: #0e90eb;
 }
 .keyzen .creation__overlay {
   background: rgba(11,182,103,0.05);

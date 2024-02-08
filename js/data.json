@@ -9,6 +9,13 @@
       "isClosedSource": true
     },
     {
+      "key": "webstiles",
+      "href": "http://webstiles.namanyayg.com/",
+      "name": "Webstiles In-Browser UI Prototyping",
+      "type": "Tool",
+      "createdAt": "2013-01"
+    },
+    {
       "key": "keyzen",
       "href": "https://nmn.gl/KeyZen/",
       "name": "KeyZen Touch Typing",

@@ -18,6 +18,7 @@ body
   font-weight 300
   font-size 125%
   color #353535
+  line-height 1.5
 
 $text-color = desaturate(#0a3d5d, 60%)
 $brand-color = #2996ff
@@ -262,6 +263,12 @@ h3
   &__img
     position relative
     width calc(50% - 1em)
+    display flex
+    align-items center
+
+    img, a
+      display block
+      width 100%
 
   &__overlay
     content ''
@@ -328,9 +335,6 @@ h3
     a
       border-bottom thin solid mix(#eee, $brand-color)
 
-  img
-    width 100%
-
   @media mqPalm
     flex-direction column
     margin-bottom 4em
@@ -357,6 +361,9 @@ creation-style(color)
 
 .collisions
   creation-style #0ead15
+
+.webstiles
+  creation-style #0e90eb
 
 .keyzen
   creation-style #0bb667
