@@ -13,6 +13,7 @@ $light-grey = lighten($grey, 20%)
 /* Global */
 $main-font-family = 'Open Sans', sans-serif
 $sec-font-family = 'Georgia', serif
+$alt--font-family = Europa, Segoe UI, Avenir, Helvetica, monospace;
 
 $main-anchor-color = $prim-color
 $main-anchor-color--hover = darken($prim-color, 20%)
@@ -25,3 +26,25 @@ $root-text-color = darken($prim-color, 80%)
 $sec-text-color = darken($prim-color, 80%)
 
 $light-text-color = lighten($root-text-color, 50%)
+
+/* Shared Vars Across Projects */
+$base-font-size =   1.25rem;
+$base-line-height = 1.5;
+$spacing-unit =     2rem;
+
+$color--alt-bg = #19202b;
+$color--alt-bg--dark = #080f25;
+
+$color--alt-bg--border = rgba(white, .05);
+$color--alt-bg-text = #edf4ff;
+$color--alt-bg-subtitle = darken($color--alt-bg-text, 10%);
+$color--alt-bg-text--light = #879bbb;
+$color--alt-bg-title-text = #ffffff;
+
+// Width of the content area
+$content-width =    45em;
+
+$on-palm =          40em;
+$on-laptop =        45em;
+
+mqPalm = "only screen and (max-width: " + $on-palm + ")"

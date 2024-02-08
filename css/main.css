@@ -186,37 +186,187 @@ h3 {
 a {
   color: #2996ff;
 }
+a:focus {
+  outline: none;
+}
 /* ==========================================================================
    =Content
    ========================================================================== */
-header {
+.site-header,
+.site-footer {
+  color: #879bbb;
+  background: #19202b;
+  background: radial-gradient(#19202b, #080f25);
+  font-family: Europa, Segoe UI, Avenir, Helvetica, monospace;
+  padding: 4rem 0;
+  font-weight: 400;
+  position: relative;
+}
+.site-header a,
+.site-footer a {
+  border: none;
+}
+.site-header a:hover,
+.site-footer a:hover {
+  color: #edf4ff;
+}
+.site-header > .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.svg-logo {
+  display: inline-block;
+  width: 30px;
+  margin-right: 0.2em;
+}
+.svg-logo path {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 40px;
+  stroke: #edf4ff !important;
+}
+.site-header {
+  margin: 0 0 4em;
+}
+.site-title {
+  font-size: 2.1875rem;
+  text-decoration: none;
+  line-height: 4.21875rem;
+  color: #edf4ff !important;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.site-title,
+.site-title:visited {
+  color: inherit;
+}
+.logo__apostrophe {
+  transform: rotate(6deg) translate(-2px, 0);
+  display: inline-block;
+}
+.site-nav {
+  line-height: 4.21875rem;
+}
+.site-nav .nav-trigger {
+  display: none;
+}
+.site-nav .menu-icon {
+  display: none;
+}
+.site-nav .page-link {
+  color: #879bbb;
+  line-height: 1.5;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+.site-nav .page-link span {
+  transition: all 0.15s ease;
+  display: inline-block;
+  color: #879bbb;
+}
+.site-nav .page-link:hover {
+  color: #879bbb;
+}
+.site-nav .page-link:hover span {
+  color: #edf4ff;
+  transform: translateY(-0.25em);
+}
+.site-nav .page-link:not(:last-child) {
+  margin-right: 2rem;
+}
+.site-nav .page-link:not(:last-child):after {
+  content: "◦";
+  margin-left: 2rem;
+  opacity: 0.3;
+}
+@media only screen and (max-width: 40em) {
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 1rem;
+    border-radius: 5px;
+    text-align: right;
+  }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .site-nav .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .site-nav .menu-icon > svg {
+    fill: #879bbb;
+  }
+  .site-nav input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+  .site-nav input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  .site-nav .page-link:hover span {
+    transform: none;
+  }
+  .site-nav .page-link:after {
+    display: none;
+  }
+  .site-nav .page-link:not(:last-child) {
+    margin-right: 0;
+  }
+}
+/**
+ * Site footer
+ */
+.site-footer {
+  font-size: 0.75em;
   text-align: center;
+  color: #879bbb;
 }
-h1 {
-  font-size: 4em;
-  margin: 0 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px rgba(10,61,93,0.3), 4px 4px rgba(10,61,93,0.1);
+.site-footer p {
+  margin-bottom: 2rem/2;
 }
+.footer-title {
+  font-size: 2.1875rem;
+  text-decoration: none;
+  font-weight: 400;
+  margin-bottom: 2rem/2;
+  color: #edf4ff;
+}
+/* ==========================================================================
+   =Content
+   ========================================================================== */
 h2 {
   margin: 0.375em 0 0.65em;
 }
 h3 {
   margin: 0 0 1.5em;
 }
-h3 a {
-  color: inherit;
-  text-decoration: none;
-  background: #e4ecf1;
-  border-radius: 2px;
-  padding: 0 7px 4px;
-  font-weight: 400;
-  transition: all 0.1s ease;
-}
-h3 a:hover {
-  background: #3f627a;
-  color: #fff;
+.wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 .creations {
   overflow: hidden;

@@ -28,22 +28,209 @@ h1, h2, h3
 
 a
   color $brand-color
+  &:focus
+    outline none
 
 
 /* ==========================================================================
    =Content
    ========================================================================== */
 
+.site-header, .site-footer {
+  color: $color--alt-bg-text--light;
+  background: $color--alt-bg;
+  background: radial-gradient($color--alt-bg, $color--alt-bg--dark);
+  font-family: $alt--font-family;
+  padding: $spacing-unit * 2 0;
+  font-weight: 400;
 
-header
-  text-align center
+  // Positioning context for the mobile navigation icon
+  position: relative;
 
-h1
-  font-size 4em
-  margin 0 0
-  font-weight 700
-  text-transform uppercase
-  text-shadow 1px 1px white, 2px 2px white, 3px 3px rgba(#0a3d5d, .3), 4px 4px rgba(#0a3d5d, .1)
+  a {
+    border: none;
+    &:hover {
+      color: $color--alt-bg-text;
+    }
+  }
+}
+
+.site-header > .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.svg-logo {
+  display: inline-block;
+  width: 30px;
+  margin-right: .2em;
+  path {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 40px;
+    stroke: $color--alt-bg-text !important;
+  }
+}
+
+.site-header {
+  margin: 0 0 4em;
+}
+
+.site-title {
+  font-size: 2.1875rem;
+  text-decoration: none;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  color: $color--alt-bg-text !important;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  font-weight: 400;
+
+  &,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.logo__apostrophe {
+  transform: rotate(6deg) translate(-2px, 0);
+  display: inline-block;
+}
+
+.site-nav {
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $color--alt-bg-text--light;
+    line-height: $base-line-height;
+    text-transform: lowercase;
+    text-decoration: none;
+
+    span {
+      transition: all .15s ease;
+      display: inline-block;
+      color: $color--alt-bg-text--light;
+    }
+
+    &:hover {
+      color: $color--alt-bg-text--light;
+      span {
+        color: $color--alt-bg-text;
+        transform: translateY(-.25em);
+      }
+    }
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: $spacing-unit;
+      &:after {
+        content: "◦";
+        margin-left: $spacing-unit;
+        opacity: .3;
+      }
+    }
+  }
+
+  @media mqPalm {
+    position: absolute;
+    top: 9px;
+    right: 1rem;
+    border-radius: 5px;
+    text-align: right;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $color--alt-bg-text--light;
+      }
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+      margin-left: 20px;
+      font-size: 1rem;
+      text-transform: capitalize;
+
+      &:hover {
+        span {
+          transform: none
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  font-size: .75em;
+  text-align: center;
+  color: $color--alt-bg-text--light;
+
+  p {
+    margin-bottom: $spacing-unit / 2;
+  }
+}
+
+.footer-title {
+  font-size: 2.1875rem;
+  text-decoration: none;
+  font-weight: 400;
+  margin-bottom: $spacing-unit / 2;
+  color: $color--alt-bg-text;
+}
+
+
+/* ==========================================================================
+   =Content
+   ========================================================================== */
 
 h2
   margin .375em 0 .65em
@@ -51,19 +238,10 @@ h2
 h3
   margin 0 0 1.5em
 
-  a
-    color inherit
-    text-decoration none
-    background lighten($text-color, 90%)
-    border-radius 2px
-    padding 0 7px 4px
-    font-weight 400
-    transition all .1s ease
-
-    &:hover
-      background lighten($text-color, 20%)
-      color white
-
+.wrapper
+  max-width 60em
+  margin 0 auto
+  padding 0 1rem
 
 .creations
   overflow hidden

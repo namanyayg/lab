@@ -15,16 +15,59 @@ head
 	meta(name='description', content='')
 	meta(name='viewport', content='width=device-width')
 	link(href='css/main.css', rel='stylesheet', type='text/css', media='all')
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	link(rel="stylesheet" href="https://use.typekit.net/qfj0txf.css")
+	link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css')
 	//if lt IE 9
 		script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
 	script(src='js/main.js')
 	block title
 
 body
-
 	block header
+		header.site-header(role='banner')
+			.wrapper
+				a.site-title(rel='author' href='/lab')
+					svg#Layer_1.svg-logo(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='30' preserveaspectratio='xMidYMid meet' viewbox='0 0 406 405.47')
+						path(d='M265 264.47v-122C265 74.91 210.27 20 142.71 20S20 74.77 20 142.32v243.15')
+						path(d='M141 142.47v121c0 67.56 55.71 122 123.26 122S386 331.66 386 264.1V20.47')
+					span.logo__apostrophe &rsquo;
+					| s Lab
+				nav.site-nav
+					input#nav-trigger.nav-trigger(type='checkbox')
+					label(for='nav-trigger')
+						span.menu-icon
+							svg(viewbox='0 0 18 15' width='18px' height='15px')
+								path(d='M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z')
+					.trigger
+						a.page-link(href='/')
+							span Home
+						a.page-link(href='/#about')
+							span About
+						a.page-link(rel='author' href='/blog')
+							span Blog
+						a.page-link(rel='author' href='/lab')
+							span Lab
+
 
 	block content
 
 	block footer
+		footer.site-footer.h-card
+			data.u-url(href='/lab')
+			.wrapper
+				a.footer-title(rel='author' href='/lab')
+					svg#Layer_1.svg-logo(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='30' preserveaspectratio='xMidYMid meet' viewbox='0 0 406 405.47')
+						path(d='M265 264.47v-122C265 74.91 210.27 20 142.71 20S20 74.77 20 142.32v243.15')
+						path(d='M141 142.47v121c0 67.56 55.71 122 123.26 122S386 331.66 386 264.1V20.47')
+					span.logo__apostrophe &rsquo;
+					| s Lab
+				//- p.footer-subtitle
+				p.footer-credits
+					| Made with 
+					span.heart &#x2764;
+					|  in India
+				p
+					| &copy; Copyright 
+					time 2015
+					| &thinsp;&ndash;&thinsp;
+					time(datetime='#{ new Date() }') #{ new Date().getFullYear() }
