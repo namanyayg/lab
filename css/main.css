@@ -346,7 +346,7 @@ a:focus {
   color: #879bbb;
 }
 .site-footer p {
-  margin-bottom: 2rem/2;
+  margin: 1.5rem 0;
 }
 .footer-title {
   font-size: 2.1875rem;
@@ -602,7 +602,7 @@ h3 {
   }
 }
 @media (max-width: 35em) {
-  body {
+  .creations {
     font-size: 100%;
   }
 }
