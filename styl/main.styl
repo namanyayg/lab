@@ -331,6 +331,21 @@ h3
   img
     width 100%
 
+  @media mqPalm
+    flex-direction column
+    margin-bottom 4em
+
+    &__img
+      width 100%
+      margin-bottom 1em
+
+    &__content
+      width 100%
+
+    &__source
+      text-align left
+
+
 creation-style(color)
   .creation__overlay
     background rgba(color, .05)
@@ -376,19 +391,12 @@ creation-style(color)
    =MEDIA
    ========================================================================== */
 
-// @media (max-width 90em) 
-
 @media (max-width 65em)
   h1
     font-size 3em
   h2, h3
     font-size 1em
 
-@media (max-width 50em)
-  body
-    max-width 25em
-    margin: 0 auto;
-
 @media (max-width 35em)
   body
-    font-size 112.5%
+    font-size 100%

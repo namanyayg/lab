@@ -458,6 +458,22 @@ h3 {
 .creation img {
   width: 100%;
 }
+@media only screen and (max-width: 40em) {
+  .creation {
+    flex-direction: column;
+    margin-bottom: 4em;
+  }
+  .creation__img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .creation__content {
+    width: 100%;
+  }
+  .creation__source {
+    text-align: left;
+  }
+}
 .collisions .creation__overlay {
   background: rgba(14,173,21,0.05);
 }
@@ -570,14 +586,8 @@ h3 {
     font-size: 1em;
   }
 }
-@media (max-width: 50em) {
-  body {
-    max-width: 25em;
-    margin: 0 auto;
-  }
-}
 @media (max-width: 35em) {
   body {
-    font-size: 112.5%;
+    font-size: 100%;
   }
 }
