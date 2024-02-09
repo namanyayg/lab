@@ -25,17 +25,19 @@ block content
             .creation__date-and-age(data-created-at=c.createdAt)
               | Created&nbsp;
               span.date &hellip;
-              |  (Age&nbsp;
-              span.age &hellip;
-              | )
+              span.age-container
           article
+              - if (c.key == "webstiles")
+                p I made webstiles around the time when I first started working on client projects. Webstiles was born out of a need to have an easy to understand and easy to use way to share design prototyping ideas with clients.
+                p Webstiles soon became <a href="https://nmn.gl/blog/my-workflow-when-working-with-clients">a core part of my workflow</a>. My clients loved seeing multiple different Webstiles to choose from, and it also seemed to be well-received on social media.
+
+              - if (c.key == "indiasmile")
+                p Around when COVID struck, I wanted some way for my friends and family to be informed and also some way to unwind. That's why my team and I decided to make IndiaSmile. It was  no-nonsense website that showed the latest COVID-19 statistics, a whatsapp and telgram community of 2500+ members, and ways to stay happy and healthy during the pandemic combined.
+                p It went viral. At its peak, it had over <strong>6,00,000 hits</strong> per day. I enjoyed the complex challenge of rearchitecturing the backend to handle the traffic.
+
               - if (c.key == "lccpp")
                 p I always felt frustrated at the study material for my 11<sup>th</sup> grade Computer Science course, which was an introduction to C++. I believed there was a massive improvement to be made by re-organizing the structure and steps of the course.
                 p So I did just that. While finishing my 11<sup>th</sup> grade, I wrote a book called "Less Confusing C++" to teach the coursework in my style. Since the target audience was my peers, I made sure that the book is available for free.
-
-              - if (c.key == "webstiles")
-                p I made webstiles around the time when I first started working on client projects. Webstiles was born out of a need to have an easy to understand and easy to use way to share design prototyping ideas with clients.
-                p Webstiles soon became <a href="https://nmn.gl/blog/my-workflow-when-working-with-clients">a core part of my workflow</a>. My clients loved seeing multiple different Webstiles to choose from, and it also seemed to be well-received on Reddit and HN.
 
               - if (c.key == "keyzen")
                 p I made this game for a hackathon in a few hours. It was around a time when I was obssessed with improving my typing speed, following the logic that faster typing = faster programming.

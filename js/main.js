@@ -23,6 +23,8 @@ window.addEventListener('load', function () {
     }
     // set formatted age and created at
     $('.date', $creation).textContent = createdAt.toLocaleDateString(undefined, { year: 'numeric', month: 'short' })
-    $('.age', $creation).textContent = age
+    if (age <= 18) {
+      $('.age-container', $creation).innerHTML = ` (Age&nbsp;${age})`
+    }
   }
 });

@@ -386,6 +386,9 @@ h3 {
 .creation a {
   text-decoration: none;
 }
+.creation strong {
+  font-weight: 400;
+}
 .creation__img {
   position: relative;
   width: calc(50% - 1em);
@@ -490,6 +493,9 @@ h3 {
 .collisions .creation__link {
   background: #0ead15;
 }
+.collisions .creation__name a {
+  color: #0ead15;
+}
 .webstiles .creation__overlay {
   background: rgba(14,144,235,0.05);
 }
@@ -499,6 +505,22 @@ h3 {
 }
 .webstiles .creation__link {
   background: #0e90eb;
+}
+.webstiles .creation__name a {
+  color: #0e90eb;
+}
+.indiasmile .creation__overlay {
+  background: rgba(84,160,255,0.05);
+}
+.indiasmile .creation__type {
+  color: #54a0ff;
+  border-color: #54a0ff;
+}
+.indiasmile .creation__link {
+  background: #54a0ff;
+}
+.indiasmile .creation__name a {
+  color: #54a0ff;
 }
 .keyzen .creation__overlay {
   background: rgba(11,182,103,0.05);
@@ -510,6 +532,9 @@ h3 {
 .keyzen .creation__link {
   background: #0bb667;
 }
+.keyzen .creation__name a {
+  color: #0bb667;
+}
 .equipot .creation__overlay {
   background: rgba(255,87,34,0.05);
 }
@@ -519,6 +544,9 @@ h3 {
 }
 .equipot .creation__link {
   background: #ff5722;
+}
+.equipot .creation__name a {
+  color: #ff5722;
 }
 .acgen .creation__overlay {
   background: rgba(63,81,181,0.05);
@@ -530,15 +558,21 @@ h3 {
 .acgen .creation__link {
   background: #3f51b5;
 }
+.acgen .creation__name a {
+  color: #3f51b5;
+}
 .lccpp .creation__overlay {
-  background: rgba(41,121,255,0.05);
+  background: rgba(255,167,0,0.05);
 }
 .lccpp .creation__type {
-  color: #2979ff;
-  border-color: #2979ff;
+  color: #ffa700;
+  border-color: #ffa700;
 }
 .lccpp .creation__link {
-  background: #2979ff;
+  background: #ffa700;
+}
+.lccpp .creation__name a {
+  color: #ffa700;
 }
 .shm-simulator .creation__overlay {
   background: rgba(156,39,176,0.05);
@@ -550,6 +584,9 @@ h3 {
 .shm-simulator .creation__link {
   background: #9c27b0;
 }
+.shm-simulator .creation__name a {
+  color: #9c27b0;
+}
 .ac-video .creation__overlay {
   background: rgba(255,171,0,0.05);
 }
@@ -559,6 +596,9 @@ h3 {
 }
 .ac-video .creation__link {
   background: #ffab00;
+}
+.ac-video .creation__name a {
+  color: #ffab00;
 }
 .diode .creation__overlay {
   background: rgba(255,85,137,0.05);
@@ -570,6 +610,9 @@ h3 {
 .diode .creation__link {
   background: #ff5589;
 }
+.diode .creation__name a {
+  color: #ff5589;
+}
 .bandc .creation__overlay {
   background: rgba(86,94,142,0.05);
 }
@@ -580,6 +623,9 @@ h3 {
 .bandc .creation__link {
   background: #565e8e;
 }
+.bandc .creation__name a {
+  color: #565e8e;
+}
 .acgraphs .creation__overlay {
   background: rgba(0,150,136,0.05);
 }
@@ -589,6 +635,9 @@ h3 {
 }
 .acgraphs .creation__link {
   background: #009688;
+}
+.acgraphs .creation__name a {
+  color: #009688;
 }
 /* ==========================================================================
    =MEDIA
