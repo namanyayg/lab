@@ -11,7 +11,7 @@ block content
   .creations
     - for (var i = 0; i < data.length; i++) {
       - var c = data[i]
-      .creation(class=c.key data-type=c.type)
+      .creation(id=c.key class=c.key data-type=c.type)
         .creation__img
           a(href=c.href)
             img(src="img/#{c.key}.png")
