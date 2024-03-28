@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "key": "kevin",
+      "href": "https://nmn.gl/kevin",
+      "name": "Kevin: Open Source AI Software Engineer",
+      "type": "AI",
+      "createdAt": "2024-03"
+    },
+    {
       "key": "webstiles",
       "href": "http://webstiles.namanyayg.com/",
       "name": "Webstiles In-Browser UI Prototyping",

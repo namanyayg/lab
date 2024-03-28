@@ -483,6 +483,19 @@ h3 {
     text-align: left;
   }
 }
+.kevin .creation__overlay {
+  background: rgba(35,194,188,0.05);
+}
+.kevin .creation__type {
+  color: #23c2bc;
+  border-color: #23c2bc;
+}
+.kevin .creation__link {
+  background: #23c2bc;
+}
+.kevin .creation__name a {
+  color: #23c2bc;
+}
 .collisions .creation__overlay {
   background: rgba(14,173,21,0.05);
 }
