@@ -5,7 +5,8 @@
       "href": "https://notatherapistai.com",
       "name": "Serenity: Mental Health AI Chat Bot",
       "type": "AI",
-      "createdAt": "2024-05"
+      "createdAt": "2024-05",
+      "isClosedSource": true
     },
     {
       "key": "kevin",
