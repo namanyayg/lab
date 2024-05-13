@@ -483,6 +483,19 @@ h3 {
     text-align: left;
   }
 }
+.serenityai .creation__overlay {
+  background: rgba(28,147,227,0.05);
+}
+.serenityai .creation__type {
+  color: #1c93e3;
+  border-color: #1c93e3;
+}
+.serenityai .creation__link {
+  background: #1c93e3;
+}
+.serenityai .creation__name a {
+  color: #1c93e3;
+}
 .kevin .creation__overlay {
   background: rgba(35,194,188,0.05);
 }

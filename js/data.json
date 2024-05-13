@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "key": "serenityai",
+      "href": "https://notatherapistai.com",
+      "name": "Serenity: Mental Health AI Chat Bot",
+      "type": "AI",
+      "createdAt": "2024-05"
+    },
+    {
       "key": "kevin",
       "href": "https://nmn.gl/kevin",
       "name": "Kevin: Open Source AI Software Engineer",
